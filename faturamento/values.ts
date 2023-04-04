@@ -5,7 +5,7 @@
 • Número de dias no mês em que o valor de faturamento diário foi superior à média mensal.
 */
 
-export const faturamento = [
+export const invoicing = [
     {
         "dia": 1,
         "valor": 22174.1664
@@ -128,16 +128,16 @@ export const faturamento = [
     },
 ]
 
-export const totalValor = faturamento.map((value) => value.valor).reduce((acc, curr) => acc + curr, 0)
+export const totalValue = invoicing.map((value) => value.valor).reduce((acc, curr) => acc + curr, 0)
 
-export function totaldias(): number {
-    let maiordia = 0;
-    faturamento.forEach((item) => {
-      if (item.dia > maiordia) {
-        maiordia = item.dia;
+export function totaldays(): number {
+    let biggestdDay = 0;
+    invoicing.forEach((item) => {
+      if (item.dia > biggestdDay) {
+        biggestdDay = item.dia;
       }
     });
-    return maiordia;
+    return biggestdDay;
   }
 
-export const mediaMensal = totalValor / totaldias();
+export const monthlyAverage = totalValue / totaldays();

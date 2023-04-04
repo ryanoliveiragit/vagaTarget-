@@ -1,11 +1,11 @@
-import { faturamento } from "./values";
+import { invoicing } from "./values";
 
-let menorValor = Infinity;
+let lowerValue = Infinity;
 
-faturamento.forEach((item) => {
-  if (item.valor > 0 && item.valor < menorValor) {
-    menorValor = item.valor;
+invoicing.forEach((item) => {
+  if (item.valor > 0 && item.valor < lowerValue) {
+    lowerValue = item.valor;
   }
 });
 
-console.log(menorValor);
+console.log(lowerValue);

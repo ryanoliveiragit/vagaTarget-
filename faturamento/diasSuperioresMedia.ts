@@ -1,11 +1,11 @@
-import { faturamento, mediaMensal } from "./values";
+import { invoicing, monthlyAverage } from "./values";
 
-let contagemDiasMaiorMedia = 0;
+let LargerDaysCount = 0;
 
-faturamento.forEach((item) => {
-  if (item.valor > mediaMensal) {
-    contagemDiasMaiorMedia++;
+invoicing.forEach((item) => {
+  if (item.valor > monthlyAverage) {
+    LargerDaysCount++;
   }
 });
 
-console.log(contagemDiasMaiorMedia);
+console.log(LargerDaysCount);

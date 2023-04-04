@@ -11,7 +11,7 @@ Escreva um programa na linguagem que desejar onde calcule o percentual de repres
 
 */
 
-export const faturamentoMensal = [
+export const monthlyBilling = [
     {
         state: 'SP',
         value: 67836.43,
@@ -34,21 +34,21 @@ export const faturamentoMensal = [
     },
 ]
 function calcularTotalFaturado() {
-    let totalMensal = 0;
+    let totalMonthly = 0;
   
-    faturamentoMensal.forEach((item) => {
-      totalMensal += item.value;
+    monthlyBilling.forEach((item) => {
+        totalMonthly += item.value;
     });
   
-    return totalMensal;
+    return totalMonthly;
   }
 
-function Percentual() {
-    const totalMensal = calcularTotalFaturado();
-    faturamentoMensal.forEach((item) => {
-        const percentual = (item.value / totalMensal) * 100;
+function Percentage() {
+    const totalMonthly = calcularTotalFaturado();
+    monthlyBilling.forEach((item) => {
+        const percentual = (item.value / totalMonthly) * 100;
         console.log(`${item.state}: ${percentual.toFixed(2)}%`);
     });
 }
 
-Percentual()
+Percentage()

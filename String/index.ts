@@ -7,14 +7,14 @@ b) Evite usar funções prontas, como, por exemplo, reverse;
 
 */
 
-function inverterString(str: string) {
-    let strInvertida = "";
+function reverseString(str: string) {
+    let strInverted = "";
     for (let i = str.length - 1; i >= 0; i--) {
-      strInvertida += str[i];
+        strInverted += str[i];
     }
-    return strInvertida;
+    return strInverted;
   }
-  const frase = prompt('Qual a frase?') as string;
-  const fraseInvertida = inverterString(frase);
+  const phrase = prompt('Qual a frase?') as string;
+  const invertedPhrase = reverseString(phrase);
   
-  console.log(fraseInvertida);
+  console.log(invertedPhrase);

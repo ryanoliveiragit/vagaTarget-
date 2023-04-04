@@ -1,11 +1,11 @@
-import { faturamento } from "./values";
+import { invoicing } from "./values";
 
-let maiorValor = 0;
+let highestValue = 0;
 
-faturamento.forEach((item) => {
-  if (item.valor > maiorValor) {
-    maiorValor = item.valor;
+invoicing.forEach((item) => {
+  if (item.valor > highestValue) {
+    highestValue = item.valor;
   }
 });
 
-console.log(maiorValor);
+console.log(highestValue);
